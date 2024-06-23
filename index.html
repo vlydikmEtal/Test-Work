@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Test Work</title>
+    <meta name="description" content="Test Work" />
+    <script src="js/script.js" defer></script>
+    <script src="js/gsap.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="loader">
+        <div class="loader__title">Vladislav Devochka</div>
+        <div class="loader__item loader__item-first"></div>
+        <div class="loader__item loader__item-second"></div>
+        <div class="loader__item loader__item-three"></div>
+      </div>
+      <div class="modal" id="successModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Форма успешно отправлена!</p>
+        </div>
+      </div>
+      <header class="header">
+        <nav class="header__menu-nav">
+          <div class="header__menu-content">
+            <span class="close-btn">
+              <img src="img/icon/Close.svg" alt="close" />
+            </span>
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#">Про Меня</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Мой Опыт</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Мои Навыки</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Мои Работы</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Прайс-Лист</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <div class="header__menu-social">
+              <ul class="header__menu-link">
+                <li class="header__link-item">
+                  <a
+                    class="header__social-link github"
+                    href="https://www.github.com"
+                    aria-label="github"
+                  >
+                  </a>
+                </li>
+                <li class="header__link-item">
+                  <a
+                    class="header__social-link instagram"
+                    href="https://www.instagram.com"
+                    aria-label="instagram"
+                  >
+                  </a>
+                </li>
+                <li class="header__link-item">
+                  <a
+                    class="header__social-link facebook"
+                    href="https://www.facebook.com"
+                    aria-label="facebook"
+                  >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="header__social">
+          <div class="header__social-inner">
+            <div class="header__social-wrapp">
+              <div class="header__social-info">
+                <span class="header__social-title">Социальные сети</span>
+              </div>
+              <div class="header__social-line">
+                <div class="header__social-line-inner"></div>
+              </div>
+              <ul class="header__social-list">
+                <li class="header__social-item">
+                  <a
+                    class="header__social-link github"
+                    href="https://www.github.com"
+                    target="_blank"
+                    aria-label="github"
+                  ></a>
+                </li>
+                <li class="header__social-item">
+                  <a
+                    class="header__social-link instagram"
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    aria-label="instagram"
+                  ></a>
+                </li>
+                <li class="header__social-item">
+                  <a
+                    class="header__social-link facebook"
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    aria-label="facebook"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__profile">
+          <div class="header__profile-inner">
+            <div class="header__profile-info">
+              <span class="header__profile-name circle--orange"
+                >Меня зовут Александра Смит</span
+              >
+              <h1 class="header__profile-title">
+                Я web-разработчик <br />
+                из города Москва
+              </h1>
+              <div class="header__profile-buttons">
+                <a
+                  class="button button--orange"
+                  href="https://github.com/vlydikmEtal"
+                  target="_blank"
+                  >Портфолио</a
+                >
+                <a
+                  class="button"
+                  href="https://hh.ru/resume/0ba87843ff0ce97cd60039ed1f37627970596d"
+                  target="_blank"
+                  >Про меня</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__burger">
+          <div class="header__burger-inner">
+            <span class="burger">
+              <span></span>
+            </span>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="experience my__experience">
+          <div class="container">
+            <div class="experience__inner">
+              <div class="experience__title-box">
+                <span class="experience__box-subtitle">Опыт</span>
+                <h2 class="experience__box-title">Чем я буду полезна</h2>
+              </div>
+              <div class="experience__content-cards">
+                <div class="experience__content-card">
+                  <h2 class="experience__content-title">Образование</h2>
+                  <div class="experience__card-item">
+                    <div class="experience__wrapp">
+                      <div class="experience__item-icon">
+                        <img src="img/icon/icon1.svg" alt="education" />
+                      </div>
+                      <div class="experienxe__item-info">
+                        <h3 class="experience__item-title">
+                          МГТУ им. Н. Э. Баумана
+                        </h3>
+                        <span class="experience__item-company"
+                          >Диплом магистра | Москва (2014-2020)</span
+                        >
+                      </div>
+                    </div>
+                    <div class="experience__item-content">
+                      <p class="experience__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmo.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="experience__card-item">
+                    <div class="experience__wrapp">
+                      <div class="experience__item-icon">
+                        <img src="img/icon/icon2.svg" alt="Curses" />
+                      </div>
+                      <div class="experienxe__item-info">
+                        <h3 class="experience__item-title">Udemy</h3>
+                        <span class="experience__item-company"
+                          >Курсы по Web-разработке
+                        </span>
+                      </div>
+                    </div>
+                    <div class="experience__item-content">
+                      <p class="experience__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="experience__content-card">
+                  <h2 class="experience__content-title">Опыт работы</h2>
+                  <div class="experience__card-item">
+                    <div class="experience__wrapp">
+                      <div class="experience__item-icon">
+                        <img src="img/icon/icon3.svg" alt="Work" />
+                      </div>
+                      <div class="experienxe__item-info">
+                        <h3 class="experience__item-title">
+                          Front-End Developer
+                        </h3>
+                        <span class="experience__item-company"
+                          >EPAM | Москва (2018-2019)</span
+                        >
+                      </div>
+                    </div>
+                    <div class="experience__item-content">
+                      <p class="experience__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmo.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="experience__card-item">
+                    <div class="experience__wrapp">
+                      <div class="experience__item-icon">
+                        <img src="img/icon/icon4.svg" alt="education" />
+                      </div>
+                      <div class="experienxe__item-info">
+                        <h3 class="experience__item-title">UI/UX Designer</h3>
+                        <span class="experience__item-company"
+                          >Squad Team | Москва (2018)</span
+                        >
+                      </div>
+                    </div>
+                    <div class="experience__item-content">
+                      <p class="experience__item-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contact my__contact">
+          <div class="container">
+            <div class="contact__inner">
+              <div class="contact__image">
+                <img src="img/decor/Photo.jpg" alt="Me" />
+              </div>
+              <form
+                class="contact__form"
+                method="POST"
+                action="https://jsonplaceholder.typicode.com/posts"
+              >
+                <div class="contact__form-description">
+                  <span class="contact__form-subtitle"> Контакты </span>
+                  <h2 class="contact__form-title">Свяжитесь со мной</h2>
+                </div>
+                <div class="contact__form-info">
+                  <p>Любым удобным для вас способом:</p>
+                  <ul class="contact__form-list">
+                    <li class="contact__form-item">
+                      <a
+                        class="contact__form-link facebook"
+                        href="https://www.facebook.com"
+                      ></a>
+                    </li>
+                    <li class="contact__form-item">
+                      <a
+                        class="contact__form-link telegram"
+                        href="https://www.telegram.com"
+                      ></a>
+                    </li>
+                    <li class="contact__form-item">
+                      <a
+                        class="contact__form-link instagram"
+                        href="https://www.instagram.com"
+                      ></a>
+                    </li>
+                  </ul>
+                  <p>Или оставьте ваши данные и я сама вам напишу:</p>
+                </div>
+                <div class="contact__form-wrapper">
+                  <div class="contact__form-group">
+                    <label class="contact__form-label" for="name"
+                      >Ваше имя</label
+                    >
+                    <input
+                      class="contact__form-input"
+                      type="text"
+                      id="name"
+                      name="name"
+                      value="Иван"
+                    />
+                    <span class="error-message">Введите ваше имя.</span>
+                  </div>
+                  <div class="contact__form-group">
+                    <label class="contact__form-label" for="email"
+                      >Ваша почта</label
+                    >
+                    <input
+                      class="contact__form-input"
+                      type="email"
+                      id="email"
+                      name="email"
+                    />
+                    <span class="error-message">Введите ваш email.</span>
+                  </div>
+                </div>
+                <div class="contact__form-group">
+                  <label class="contact__form-label" for="message"
+                    >Ваше сообщение</label
+                  >
+                  <textarea
+                    class="contact__form-input contacts__form-input--textarea"
+                    id="message"
+                    name="message"
+                  ></textarea>
+                  <span class="error-message">Введите ваше сообщение.</span>
+                </div>
+                <div class="form-group privacy-check">
+                  <input
+                    type="checkbox"
+                    id="privacyCheck"
+                    class="custom-checkbox"
+                    name="privacyCheck"
+                  />
+                  <label for="privacyCheck">
+                    Я согласен(а) с
+                    <a href="#" class="privacy-link"
+                      >политикой <br />
+                      конфиденциальности</a
+                    >.
+                  </label>
+                </div>
+                <button class="contact__form-button" type="submit">
+                  Отправить сообщение
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
