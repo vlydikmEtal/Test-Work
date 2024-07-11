@@ -16,10 +16,21 @@
   height: 100%;
   font-family: 'Manrope', sans-serif;
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  &.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
   &__inner {
     width: 100%;
     max-width: 500px;
@@ -28,6 +39,7 @@
     flex-direction: column;
     padding: 24px;
     margin: 10px;
+    transition: backdrop-filter 0.3s ease;
   }
 
   &__content {
@@ -38,6 +50,7 @@
       margin-bottom: 18px;
       color: #323232;
     }
+
     form {
       display: flex;
       flex-direction: column;
@@ -52,10 +65,20 @@
         font-size: 18px;
         color: var(--blue-color);
         border-radius: 10px;
+        @media (min-width: 375px) {
+          padding: 10px 0px 10px 10px;
+          font-size: 16px;
+        }
+        @media (min-width: 520px) {
+          padding: 24px 0px 24px 24px;
+          font-size: 18px;
+        }
       }
+
       input[type='text'] {
         margin-bottom: 4px;
       }
+
       input[type='password'] {
         margin-bottom: 24px;
       }
@@ -73,15 +96,38 @@
     border-radius: 10px;
     transition: all 0.3s ease;
     margin-bottom: 4px;
+
     img {
       width: 24px;
       height: 24px;
     }
+
+    @media (min-width: 375px) {
+      width: 32px;
+      height: 32px;
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    @media (min-width: 520px) {
+      width: 52px;
+      height: 52px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
     &:hover {
       cursor: pointer;
       transform: scale(1.03);
     }
   }
+}
+
+.modal.show .modal__inner {
+  backdrop-filter: blur(5px);
 }
 
 input::-webkit-input-placeholder {
@@ -107,12 +153,18 @@ input::placeholder {
 .checkbox-container {
   display: inline-block;
   position: relative;
-  padding-left: 30px; 
+  padding-left: 30px;
   cursor: pointer;
   user-select: none;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 24px;
+  @media (min-width: 375px) {
+    font-size: 16px;
+  }
+  @media (min-width: 520px) {
+    font-size: 18px;
+  }
 
   input[type='checkbox'] {
     position: absolute;
@@ -150,24 +202,38 @@ input::placeholder {
     }
   }
 }
+
 .link {
   color: var(--blue-color-second);
   font-size: 20px;
   line-height: 27.32px;
   margin-bottom: 36px;
   font-weight: 500;
+  @media (min-width: 375px) {
+    font-size: 16px;
+  }
+  @media (min-width: 520px) {
+    font-size: 20px;
+  }
 }
 .button--second {
-  padding: 18px 0;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  padding: 5px 0;
   margin-bottom: 4px;
+  @media (min-width: 375px) {
+    padding: 10px 0;
+  }
+
+  @media (min-width: 520px) {
+    padding: 18px 0;
+  }
 }
 .button--third {
   background-color: transparent;
-  border: 1px solid #244C98;
-  color: #244C98;
+  border: 1px solid #244c98;
+  color: #244c98;
 }

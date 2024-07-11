@@ -16,9 +16,15 @@
   height: 100%;
   font-family: "Manrope", sans-serif;
   background: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -26,6 +32,15 @@
       -ms-flex-align: center;
           align-items: center;
   z-index: 1000;
+}
+.modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .modal__inner {
   width: 100%;
@@ -40,6 +55,10 @@
           flex-direction: column;
   padding: 24px;
   margin: 10px;
+  -webkit-transition: -webkit-backdrop-filter 0.3s ease;
+  transition: -webkit-backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
 }
 .modal__content h2 {
   font-size: calc(18px + 6 * (100vw - 375px) / 1920);
@@ -68,6 +87,20 @@
   font-size: 18px;
   color: var(--blue-color);
   border-radius: 10px;
+}
+@media (min-width: 375px) {
+  .modal__content form input[type=text],
+  .modal__content form input[type=password] {
+    padding: 10px 0px 10px 10px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 520px) {
+  .modal__content form input[type=text],
+  .modal__content form input[type=password] {
+    padding: 24px 0px 24px 24px;
+    font-size: 18px;
+  }
 }
 .modal__content form input[type=text] {
   margin-bottom: 4px;
@@ -99,10 +132,35 @@
   width: 24px;
   height: 24px;
 }
+@media (min-width: 375px) {
+  .modal__close {
+    width: 32px;
+    height: 32px;
+  }
+  .modal__close img {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media (min-width: 520px) {
+  .modal__close {
+    width: 52px;
+    height: 52px;
+  }
+  .modal__close img {
+    width: 24px;
+    height: 24px;
+  }
+}
 .modal__close:hover {
   cursor: pointer;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+}
+
+.modal.show .modal__inner {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 input::-webkit-input-placeholder {
@@ -137,6 +195,16 @@ input::placeholder {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 24px;
+}
+@media (min-width: 375px) {
+  .checkbox-container {
+    font-size: 16px;
+  }
+}
+@media (min-width: 520px) {
+  .checkbox-container {
+    font-size: 18px;
+  }
 }
 .checkbox-container input[type=checkbox] {
   position: absolute;
@@ -179,9 +247,18 @@ input::placeholder {
   margin-bottom: 36px;
   font-weight: 500;
 }
+@media (min-width: 375px) {
+  .link {
+    font-size: 16px;
+  }
+}
+@media (min-width: 520px) {
+  .link {
+    font-size: 20px;
+  }
+}
 
 .button--second {
-  padding: 18px 0;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,11 +270,22 @@ input::placeholder {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 4px;
+  padding: 5px 0;
   margin-bottom: 4px;
+}
+@media (min-width: 375px) {
+  .button--second {
+    padding: 10px 0;
+  }
+}
+@media (min-width: 520px) {
+  .button--second {
+    padding: 18px 0;
+  }
 }
 
 .button--third {
   background-color: transparent;
-  border: 1px solid #244C98;
-  color: #244C98;
+  border: 1px solid #244c98;
+  color: #244c98;
 }
