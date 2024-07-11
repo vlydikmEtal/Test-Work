@@ -14,6 +14,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  font-family: 'Manrope', sans-serif;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -50,9 +51,13 @@
         font-weight: 500;
         font-size: 18px;
         color: var(--blue-color);
+        border-radius: 10px;
       }
       input[type='text'] {
         margin-bottom: 4px;
+      }
+      input[type='password'] {
+        margin-bottom: 24px;
       }
     }
   }
@@ -99,13 +104,70 @@ input::placeholder {
   color: var(--blue-color);
 }
 
-.close {
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px; 
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 24px;
+
+  input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 2px solid #323232;
+    border-radius: 2px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: none;
+      left: 4px;
+      top: 0px;
+      width: 6px;
+      height: 12px;
+      border: solid #000;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
 }
-.modal__content {
-}
-.button {
+.link {
+  color: var(--blue-color-second);
+  font-size: 20px;
+  line-height: 27.32px;
+  margin-bottom: 36px;
+  font-weight: 500;
 }
 .button--second {
+  padding: 18px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 .button--third {
+  background-color: transparent;
+  border: 1px solid #244C98;
+  color: #244C98;
 }

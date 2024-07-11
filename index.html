@@ -63,23 +63,36 @@
     <!-- Modal -->
     <div class="modal">
       <div class="modal__inner">
-        <button class="modal__close close" type="button">
-          <img src="image/close.svg" alt="close" />
+        <button class="modal__close close">
+          <img src="image/close.svg" alt="Закрыть" />
         </button>
         <div class="modal__content">
           <h2>Войти в систему</h2>
           <form action="#" method="post">
             <label for="email">
-              <input id="email" type="text" placeholder="Email/Телефон" />
-            </label>
-            <label for="password">
-              <input id="password" type="password" placeholder="Пароль" />
-            </label>
-            <label for="check">
-              <input id="check" type="checkbox" /> Запомнить пароль
+              <input
+                id="email"
+                type="text"
+                placeholder="Email/Телефон"
+                required
+              />
             </label>
 
-            <a href="#">Восстановить</a>
+            <label for="password">
+              <input
+                id="password"
+                type="password"
+                placeholder="Пароль"
+                required
+              />
+            </label>
+
+            <label for="check" class="checkbox-container">
+              <input id="check" type="checkbox" required />
+              <span class="checkmark"></span> Запомнить пароль
+            </label>
+
+            <a class="link" href="#">Восстановить</a>
             <button class="button button--second" type="submit">Войти</button>
             <button class="button button--second button--third" type="button">
               Зарегистрироваться
