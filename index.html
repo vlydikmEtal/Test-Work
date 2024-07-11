@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/modal.min.css" />
     <title>Document</title>
     <script src="js/script.js" defer></script>
   </head>
@@ -62,17 +63,30 @@
     <!-- Modal -->
     <div class="modal">
       <div class="modal__inner">
-        <div class="modal__close close">
-          <img src="image/close.svg" alt="close">
-        </div>
+        <button class="modal__close close" type="button">
+          <img src="image/close.svg" alt="close" />
+        </button>
         <div class="modal__content">
           <h2>Войти в систему</h2>
           <form action="#" method="post">
-            
+            <label for="email">
+              <input id="email" type="text" placeholder="Email/Телефон" />
+            </label>
+            <label for="password">
+              <input id="password" type="password" placeholder="Пароль" />
+            </label>
+            <label for="check">
+              <input id="check" type="checkbox" /> Запомнить пароль
+            </label>
+
+            <a href="#">Восстановить</a>
+            <button class="button button--second" type="submit">Войти</button>
+            <button class="button button--second button--third" type="button">
+              Зарегистрироваться
+            </button>
           </form>
         </div>
       </div>
     </div>
-
   </body>
 </html>

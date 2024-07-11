@@ -1,0 +1,62 @@
+:root {
+  --blue-color: #1F4284;
+  --gray-color: #727272;
+  --blue-color-second: #244C98;
+  --white-color: #FFFFFF;
+  --bg-color-main: #EBF0FA;
+  --input-color: #D7E2F6;
+  --modal-color: #F0F4FC;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  &__inner {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--modal-color);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  &__close {
+    align-self: flex-end;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    transition: all .3s ease;
+    margin-bottom: 4px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+}
+
+.close {
+}
+.modal__content {
+}
+.button {
+}
+.button--second {
+}
+.button--third {
+}
