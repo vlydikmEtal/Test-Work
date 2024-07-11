@@ -1,11 +1,11 @@
 :root {
-  --blue-color: #1F4284;
+  --blue-color: #1f4284;
   --gray-color: #727272;
-  --blue-color-second: #244C98;
-  --white-color: #FFFFFF;
-  --bg-color-main: #EBF0FA;
-  --input-color: #D7E2F6;
-  --modal-color: #F0F4FC;
+  --blue-color-second: #244c98;
+  --white-color: #ffffff;
+  --bg-color-main: #ebf0fa;
+  --input-color: #d7e2f6;
+  --modal-color: #f0f4fc;
 }
 
 .modal {
@@ -38,6 +38,37 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 24px;
+  margin: 10px;
+}
+.modal__content h2 {
+  font-size: calc(18px + 6 * (100vw - 375px) / 1920);
+  font-weight: 500;
+  line-height: 32.78px;
+  margin-bottom: 18px;
+  color: #323232;
+}
+.modal__content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+.modal__content form input[type=text],
+.modal__content form input[type=password] {
+  background-color: var(--input-color);
+  width: 100%;
+  padding: 24px 0px 24px 24px;
+  line-height: 24.59px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--blue-color);
+}
+.modal__content form input[type=text] {
+  margin-bottom: 4px;
 }
 .modal__close {
   -ms-flex-item-align: end;
@@ -53,7 +84,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -67,4 +98,24 @@
   cursor: pointer;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+}
+
+input::-webkit-input-placeholder {
+  color: var(--blue-color);
+}
+
+input::-moz-placeholder {
+  color: var(--blue-color);
+}
+
+input:-ms-input-placeholder {
+  color: var(--blue-color);
+}
+
+input::-ms-input-placeholder {
+  color: var(--blue-color);
+}
+
+input::placeholder {
+  color: var(--blue-color);
 }
